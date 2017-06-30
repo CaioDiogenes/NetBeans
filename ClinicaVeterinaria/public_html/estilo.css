@@ -3,52 +3,53 @@ body{
     padding: 0;
 }
 
-ul {
+#cabecalho{
+   background-color: #00923f; 
+   height: 80px;
+}
+
+ul.menu {
     list-style-type: none;
-    margin: auto;
     padding: 0px;
     overflow: hidden;
-    width: 100%;
-    height: 100px;
-    background-color: #00923f;
 }
 
-img {
-    position: absolute;
-    left: 45%;
-    top: 15px;;
-    display: flex;
-    z-index: 999;
-}
-li {
-   margin-left: 200px;
-    float: left;
+.item-menu{
+    line-height: 80px;
+    vertical-align: middle;
 }
 
-li a {
+img.logo {
+    margin: 0 auto;
+    display: block;
+    height: 125px;
+    width: 125px;
+}
+
+.item-menu:hover {
+   background-color: limegreen;
+   background-image: url("imagens/hover.png");
+   background-repeat: no-repeat;
+   background-position: right bottom;
+}
+
+.item-menu a {
     display: block;
     color: white;
     text-align: center;
-    padding: calc(100%/5%); 
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: limegreen;
-    background-image: url("imagens/houver.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 20px 20px;
-}
-
 .rodape {
-    position:absolute;
+    position:relative;
     bottom: 0;
     height: 15%;
     background-color: #00923f;
     width:100%;
+}   
+
+#fale-conosco{
+ height: 5%;
+ width: 100%;
+ vertical-align: middle; 
 }
-
-
-    
-    

@@ -19,6 +19,7 @@ ul.menu {
     vertical-align: middle;
 }
 
+/* logo que fica centralizado no menu do site*/
 img.logo {
     margin: 0 auto;
     display: block;
@@ -26,6 +27,7 @@ img.logo {
     width: 125px;
 }
 
+/*hover para indicar a pata de animal ao passar por cima*/
 .item-menu:hover {
    background-color: limegreen;
    background-image: url("imagens/hover.png");
@@ -79,4 +81,44 @@ img.logo {
 #googleMap{
     width:100%;
     height:400px;
+}
+
+/* estava dando erro */
+.dropbtn {
+    background-color: #00923f;
+    color: white;
+    border: none;
+    background: none;
+}
+
+/* sombra atras da caixa dos links*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00923f;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    display: block;
+}
+
+/*o hover abaixo e dos links do dropdown, nao precisa mexer*/
+.dropdown-content a:hover{
+    background-color: limegreen;
+   background-image: url("imagens/hover.png");
+   background-repeat: no-repeat;
+   background-position: right bottom;
+    }
+
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: limegreen;
 }

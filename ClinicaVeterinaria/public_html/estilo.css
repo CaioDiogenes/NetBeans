@@ -1,6 +1,5 @@
 body{
     margin:0;
-    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -8,6 +7,8 @@ body{
 #cabecalho{
    background-color: #00923f; 
    height: 80px;
+   margin: 0;
+   padding: 0;
 }
 
 ul.menu {
@@ -42,6 +43,11 @@ img.logo {
     color: white;
     text-align: center;
     text-decoration: none;
+}
+
+.carousel{
+    width: 80%;
+    margin: 5% 10%;
 }
 
 .rodape {
@@ -131,4 +137,16 @@ img.logo {
 
 .dropdown:hover .dropbtn {
     background-color: limegreen;
+}
+
+.row{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    width: 50%;
 }

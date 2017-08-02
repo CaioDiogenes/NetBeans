@@ -79,7 +79,7 @@ img.logo {
 
 #mapa{
     height: 400px; 
-    width: 500px;
+    width: 40%;
     margin: 50px;
 }
 
@@ -151,4 +151,12 @@ h3 {
     left: 50%;
     bottom: 0;
     width: 50%;
+}
+#informacoes{
+    background-color:#E8E8E8;
+    margin-right: 50px; 
+    float: right;
+    height: 400px; 
+    width: 40%;
+    margin: 50px;
 }

@@ -5,10 +5,10 @@ body{
 }
 
 #cabecalho{
-   background-color: #00923f; 
-   height: 80px;
-   margin: 0;
-   padding: 0;
+    background-color: #00923f; 
+    height: 80px;
+    margin: 0;
+    padding: 0;
 }
 
 ul.menu {
@@ -33,9 +33,9 @@ img.logo {
 /*hover para indicar a pata de animal ao passar por cima*/
 .item-menu:hover {
     background-color: limegreen;
-   background-image: url("imagens/hover.png");
-   background-repeat: no-repeat;
-   background-position: right bottom;
+    background-image: url("imagens/hover.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .item-menu a {
@@ -59,9 +59,9 @@ img.logo {
 }   
 
 #fale-conosco{
- height: 5%;
- width: 100%;
- vertical-align: middle; 
+    height: 5%;
+    width: 100%;
+    vertical-align: middle; 
 }
 .carousel-inner > .item > img {
     position:relative;
@@ -100,6 +100,7 @@ img.logo {
     color: white;
     border: none;
     background: none;
+    text-align: center;
 }
 
 /* sombra atras da caixa dos links*/
@@ -121,14 +122,14 @@ img.logo {
 
 /*o hover abaixo e dos links do dropdown, nao precisa mexer*/
 .dropdown-content a:hover{
-   background-color: limegreen;
-   background-image: url("imagens/hover.png");
-   background-repeat: no-repeat;
-   background-size: 30px;
-   text-decoration: none;
-   color: white;
-   background-position: right bottom;
-    }
+    background-color: limegreen;
+    background-image: url("imagens/hover.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    text-decoration: none;
+    color: white;
+    background-position: right bottom;
+}
 
 .dropdown:hover .dropdown-content {
     display:block;
@@ -136,7 +137,8 @@ img.logo {
 
 
 .dropdown:hover .dropbtn {
-    background-color: limegreen;
+    text-decoration: none;
+    width: 100%;
 }
 
 .row{

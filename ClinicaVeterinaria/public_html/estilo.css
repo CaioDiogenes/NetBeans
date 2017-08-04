@@ -34,15 +34,21 @@ img.logo {
 .item-menu:hover {
     background-color: limegreen;
     background-image: url("imagens/hover.png");
+    background-size: 30px;
     background-repeat: no-repeat;
     background-position: right bottom;
+    text-decoration: none;
+    color:black;
+    display: block;
+    font-family: times new roman;
+
 }
 
 .item-menu a {
+    font-family: times new roman;
+    font-size: 19px;
     display: block;
-    color: white;
     text-align: center;
-    text-decoration: none;
 }
 
 .carousel{
@@ -97,6 +103,11 @@ img.logo {
     border: none;
     background: none;
     text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    vertical-align: middle;
+    display: block;
+    font-family: times new roman;
 }
 
 /* sombra atras da caixa dos links*/
@@ -116,25 +127,26 @@ img.logo {
     height:60px;
 }
 
-/*o hover abaixo e dos links do dropdown, nao precisa mexer*/
+/*o hover abaixo e dos links do dropdown*/
 .dropdown-content a:hover{
     background-color: limegreen;
     background-image: url("imagens/hover.png");
     background-repeat: no-repeat;
-    background-size: 30px;
+    background-size: 20px;
     text-decoration: none;
-    color: white;
+    color: black;
     background-position: right bottom;
 }
 
 .dropdown:hover .dropdown-content {
-    display:block;
+    display:block; 
 }
 
 
 .dropdown:hover .dropbtn {
     text-decoration: none;
     width: 100%;
+    color:black;
 }
 
 .row{
@@ -157,6 +169,6 @@ h3 {
     height:450px; 
 }   
 
- 
-  
-    
+
+
+

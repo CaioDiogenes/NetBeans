@@ -167,8 +167,50 @@ h3 {
     margin: 50px;
     width:600px;
     height:450px; 
-}   
+}
+        /*   texto com efeito delay nas cores e informacoes   */
+.grid-line{
+    width: 100px;
+    height: 100px;
+}
+.grid-line .col-md-1{
+    height: 100px;
+    margin-left: 18.27%;
+    -webkit-transition: .6s ease-in-out;
+    width: 100px;
+    margin:auto;
+    background-color: #f5f5f5;
+}
 
+.grid-line:hover .col-md-1{
+    background-color: black;
+    -webkit-transition: .6s ease-in-out;
+    width: 100px;
+    margin:0px;
+}
 
+#quadrado{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-left: 18.27%;
+    -webkit-transition: .6s ease-in-out;
+    border: 1px dotted #999;
+}
 
+.conteudo{
+    margin-left:15%;
+    margin-right: 15%;
+    height: auto;
+    position: relative;
+}
 
+#texto{
+    height: 100px;
+    width: 200px;
+    margin-left: 100px;
+    padding-right: 15px;
+    border: 1px dotted #999;
+    text-align: center;
+}
+            /*   acaba aqui   */

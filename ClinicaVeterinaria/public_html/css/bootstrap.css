@@ -1283,13 +1283,14 @@ h4,
 h5,
 .h5 {
     font-size: 14px;
+    margin: 10%;
 }
 h6,
 .h6 {
     font-size: 12px;
 }
 p {
-    margin: 2%;
+    margin-top: 2%;
     text-align: center;
 }
 .lead {

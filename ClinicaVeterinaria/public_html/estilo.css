@@ -161,12 +161,10 @@ h3 {
     width: 50%;
 }
 #informacoes{
-    background-color:#E8E8E8;
-    margin-right: 50px; 
     float: right;
-    margin: 50px;
-    width:600px;
-    height:450px; 
+    margin: 5%;
+    width:42%;
+    height:100%; 
 }
 
     /*efeito webkit*/

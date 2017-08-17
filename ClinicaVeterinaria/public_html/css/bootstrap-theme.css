@@ -48,6 +48,7 @@ fieldset[disabled] .btn-warning,
 fieldset[disabled] .btn-danger {
   -webkit-box-shadow: none;
           box-shadow: none;
+          
 }
 .btn-default .badge,
 .btn-primary .badge,
@@ -72,6 +73,8 @@ fieldset[disabled] .btn-danger {
   background-repeat: repeat-x;
   border-color: #dbdbdb;
   border-color: #ccc;
+  font-family: Times New Roman;
+  margin-left: 10%;
 }
 .btn-default:hover,
 .btn-default:focus {

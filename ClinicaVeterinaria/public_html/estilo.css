@@ -81,11 +81,6 @@ img.logo {
     padding: 20px;
 }
 
-#mapa{
-    height: 400px; 
-    width: 40%;
-    margin: 50px;
-}
 
 #metadedosite{
     height: 50%;
@@ -183,19 +178,14 @@ h3 {
     border: 1px dotted #999;
 }
 
-
-#quadrado{
-    height: 100%;
-    width: 100%;
-    -webkit-transition: .6s ease-in-out;
-}
-
-#texto{
+.textos{
     height: 100%;
     width: 200%;
     margin-left: 100px;
     padding-right: 2%;
     text-align: center;
+    font-size: 100%;
+    font-family: Times New Roman;
     border: 1px dotted #999;
 }
 
@@ -241,4 +231,11 @@ z-index: -1;
     margin-left: 10%;
     font-family: Times New Roman;
     font-size: 34px;
+}
+
+
+
+.textos-informacoes{
+    font-family: Times New Roman;
+    font-size: 100%;
 }

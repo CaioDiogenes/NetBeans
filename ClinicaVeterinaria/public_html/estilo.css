@@ -1,5 +1,6 @@
-body{
+html,body{
     margin:0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -54,13 +55,14 @@ img.logo {
 .carousel{
     width: 80%;
     margin: 5% 10%;
-}
+} 
 
-.rodape {
-    position: inherit;
-    background-color: #00923f;
+.rodape{
+    background-color: green;
+    height: 34%;
+    position: absolute;
     width:100%;
-}   
+}
 
 #fale-conosco{
     height: 5%;
@@ -238,4 +240,11 @@ z-index: -1;
 .textos-informacoes{
     font-family: Times New Roman;
     font-size: 100%;
+}
+
+#imagen1 img{
+    float: left;
+    margin-top: 1.5%;
+    background-position: left;
+    background-repeat: no-repeat;
 }

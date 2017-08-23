@@ -78,9 +78,10 @@ img.logo {
 
 .col-sm-12 {
     width:auto;
-    font-size: 20px;
+    font-family: Times New Roman;
+    font-size: 25px;
     background-color: #E8E8E8;
-    padding: 20px;
+    padding: 18px;
 }
 
 
@@ -202,12 +203,12 @@ h3 {
 
 
 .main{
-width: auto;
-margin-right: 20%;
-margin-left: 20%;
-height: 100%;
-width: 60%;
-z-index: -1;
+    width: auto;
+    margin-right: 20%;
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
 }
 
 .conteudo{
@@ -229,7 +230,7 @@ z-index: -1;
 }
 
 .h{
-     text-align: center;
+    text-align: center;
     margin-left: 10%;
     font-family: Times New Roman;
     font-size: 34px;
@@ -247,4 +248,58 @@ z-index: -1;
     margin-top: 1.5%;
     background-position: left;
     background-repeat: no-repeat;
+}
+
+.pergunta{
+    font-family: Times New Roman;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.formatacao{
+     font-family: Times New Roman;
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+.nome{
+    font-family: Times New Roman;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.texto{
+    margin-left: 5%;
+    font-family: Times New Roman;
+}
+
+
+  q {
+  quotes: "“" "”" "‘" "’";
+  margin: 1em;
+  position: relative;
+}
+q:before, q:after {
+  font-size: 3em;
+  position: absolute;
+}
+q:before {
+  content: open-quote;
+  left: -0.5em;
+  top: -0.3em;
+}
+q:after {
+  right: -0.4em;
+  bottom: -0.8em;
+}
+
+
+.row blockquote{
+    font-size: 17px;
+    font-family: Times New Roman;
+}
+
+.fundo{
+    width: 100%;
+    background-color: #E8E8E8;
 }

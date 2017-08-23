@@ -47,7 +47,7 @@ img.logo {
 
 .item-menu a {
     font-family: times new roman;
-    font-size: 140%;
+    font-size: 20px;
     display: block;
     text-align: center;
 }
@@ -98,9 +98,9 @@ img.logo {
     color: white;
     border: none;
     background: none;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 19px;
     vertical-align: middle;
     display: block;
     font-family: times new roman;
@@ -253,12 +253,14 @@ h3 {
 .pergunta{
     font-family: Times New Roman;
     font-size: 20px;
+    font-weight: bold;
     margin-left: 5%;
 }
 
 .formatacao{
-     font-family: Times New Roman;
+    font-family: Times New Roman;
     font-size: 18px;
+    font-weight: bold;
     margin-left: 5%;
 }
 
@@ -274,23 +276,23 @@ h3 {
 }
 
 
-  q {
-  quotes: "“" "”" "‘" "’";
-  margin: 1em;
-  position: relative;
+q {
+    quotes: "“" "”" "‘" "’";
+    margin: 1em;
+    position: relative;
 }
 q:before, q:after {
-  font-size: 3em;
-  position: absolute;
+    font-size: 3em;
+    position: absolute;
 }
 q:before {
-  content: open-quote;
-  left: -0.5em;
-  top: -0.3em;
+    content: open-quote;
+    left: -0.5em;
+    top: -0.3em;
 }
 q:after {
-  right: -0.4em;
-  bottom: -0.8em;
+    right: -0.4em;
+    bottom: -0.8em;
 }
 
 
@@ -302,4 +304,17 @@ q:after {
 .fundo{
     width: 100%;
     background-color: #E8E8E8;
+}
+
+.titulo{
+    font-weight: bold;
+    font-family: Times New Roman;
+    font-size: 45px;
+    font-style: italic;
+    margin-left: 5%;
+}
+
+.servicos{
+    font-size: 20px;
+    font-family: Times New Roman;
 }

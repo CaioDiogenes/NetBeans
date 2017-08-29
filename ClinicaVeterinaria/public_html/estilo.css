@@ -213,6 +213,7 @@ h3 {
 
 .conteudo{
     margin-top: 10%;
+    margin-top: 20%;
     text-align: justify;
 }
 
@@ -221,17 +222,20 @@ h3 {
 }
 
 .p1{
-    text-align: justify;
     margin-left: 10%;
+    margin: 0px;
+    padding:0px;
     font-family: Times New Roman;
-    font-size: 20px;
-    text-align: center;
+    font-size: 25px;
+    font-style: italic;
     min-height: 85px;
 }
 
 .h{
+    font-weight: bold;
     text-align: center;
-    margin-left: 10%;
+    margin-bottom: 3%;
+    font-style: italic;
     font-family: Times New Roman;
     font-size: 34px;
 }
@@ -253,6 +257,8 @@ h3 {
 .pergunta{
     font-family: Times New Roman;
     font-size: 20px;
+    min-height: 7%;
+    font-style: italic;
     font-weight: bold;
     margin-left: 5%;
 }
@@ -260,7 +266,6 @@ h3 {
 .formatacao{
     font-family: Times New Roman;
     font-size: 18px;
-    font-weight: bold;
     margin-left: 5%;
 }
 
@@ -314,7 +319,44 @@ q:after {
     margin-left: 5%;
 }
 
-.servicos{
+.servicos blockquote{
     font-size: 20px;
     font-family: Times New Roman;
+}
+
+.icones img{
+    width: 6.5%;
+    height: 6.5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    float: left;
+}
+
+.medium-6{
+    margin-top: 7%;
+    text-align: center;
+    width: 25%;
+}
+
+.large-3 .pergunta{
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.columns{
+    border-right: 1px solid #636363;
+    float: left;
+    height: 100%;
+}
+
+.medium-6 .texto{
+    font-size: 17px;
+}
+
+#infos{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
 }

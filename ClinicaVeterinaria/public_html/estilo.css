@@ -3,6 +3,9 @@ html,body{
     padding: 0;
     height: 100%;
     width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #cabecalho{
@@ -57,11 +60,13 @@ img.logo {
     margin: 5% 10%;
 } 
 
-.rodape{
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
     background-color: green;
-    height: 34%;
-    position: absolute;
-    width:100%;
+    min-width: 100%;
 }
 
 #fale-conosco{

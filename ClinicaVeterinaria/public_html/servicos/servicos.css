@@ -1,0 +1,11 @@
+.gallery img{
+    float: left;  
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.gallery{
+    margin: 0;
+    padding: 0;
+}

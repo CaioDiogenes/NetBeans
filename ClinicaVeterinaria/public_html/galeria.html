@@ -5,11 +5,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="estilo.css" type="text/css" />
-        <link rel="stylesheet" href="galeriahtml.css" type="text/css" />
+        <link rel="stylesheet" href="ligthbox.css" type="text/css" />
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" />
+        <script type="text/javascript" src="lightbox.js"></script>
         <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="ligthbox.js"></script>
     </head>
     <body>
         <div id="corpo">
@@ -43,19 +45,78 @@
                 <div class="col-md-1  item-menu"><a href="contato.html">Contato</a></div>
             </div>
             <br><br><br><br>
+            <div class="main2">
+                <div class="titulo"><center> Galeria de fotos: </center></div>
+                <br><br>
 
-            <!-- imagens uma ao lado da outra-->
-            <div class="gallery">
-                <img src="imagens/teste galeria/1.jpg" alt="Trolltunga Norway" width="220" height="220">
-                <div class="desc">Retiramos os pontos da Chanel hoje!!! 🐶🎀😊💕💋</div>
-            </div>
-            <div class="gallery">
-                <img src="imagens/teste galeria/2.jpg" alt="Forest" width="220" height="220">
-                <div class="desc">Viva Sao João!</div>
-            </div>
-            <div class="gallery">
-                <img src="imagens/teste galeria/3.jpg" alt="Northern Lights" width="220" height="220">
-                <div class="desc">A Belinha está livre dos pontinhos da castração!!! 🐶🏥😊👍🏻</div>
+                <!--Imagens que mostram em primeiro plano-->
+                <div class="row">
+                    <div class="column">
+                        <img src="imagens/teste galeria/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="imagens/teste galeria/2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="imagens/teste galeria/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="imagens/teste galeria/3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column">
+                        <img src="imagens/teste galeria/4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    </div>
+                </div>
+                <!--acaba aqui-->
+
+                <!-- indicadore --> 
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="imagens/teste galeria/1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="imagens/teste galeria/2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="imagens/teste galeria/3.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="imagens/teste galeria/4.jpg" style="width:100%">
+                        </div>
+                        <!--setas direita e esquerda-->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <!--coluna de imagens uma do lado da outra--> 
+                        <!-- escreva no "alt" alguma descreição da imagen caso queire -->
+                        <div class="column">
+                            <img class="demo cursor" src="imagens/teste galeria/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="descrição">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="imagens/teste galeria/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="descrição">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="imagens/teste galeria/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="descrição">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="imagens/teste galeria/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="descrição">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

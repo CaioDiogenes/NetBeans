@@ -216,6 +216,15 @@ h3 {
     z-index: -1;
 }
 
+.main2{
+    width: auto;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 100%;
+    width: 80%;
+}
+
+
 .conteudo{
     margin-top: 10%;
     margin-top: 20%;

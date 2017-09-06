@@ -66,8 +66,18 @@ img.logo {
 
 .footer {
     background-color: green;
-    min-width: 100%;
 }
+
+.footer #infos{
+    width: 40%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.footer img{
+  /* #################################### parei aqui hj  ################################ 06/09/2017 */
+}
+
 
 #fale-conosco{
     height: 5%;

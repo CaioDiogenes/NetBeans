@@ -52,68 +52,50 @@
                 <!--Imagens que mostram em primeiro plano-->
                 <div class="row">
                     <div class="column">
-                        <img src="imagens/teste galeria/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                        <img src="imagens/teste galeria/1.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                     </div>
                     <div class="column">
-                        <img src="imagens/teste galeria/2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                        <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                     </div>
                     <div class="column">
-                        <img src="imagens/teste galeria/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                        <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
                     </div>
                     <div class="column">
-                        <img src="imagens/teste galeria/3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                        <img src="imagens/teste galeria/3.jpg" alt="img"style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
                     </div>
                     <div class="column">
-                        <img src="imagens/teste galeria/4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                        <img src="imagens/teste galeria/4.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
                     </div>
                 </div>
                 <!--acaba aqui-->
 
                 <!-- indicadore --> 
                 <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <span class="cursor close glyphicon glyphicon-remove" onclick="closeModal()">&times;</span>
                     <div class="modal-content">
 
                         <div class="mySlides">
-                            <div class="numbertext">1 / 4</div>
-                            <img src="imagens/teste galeria/1.jpg" style="width:100%">
+                            <img src="imagens/teste galeria/1.jpg" alt="img">
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">2 / 4</div>
-                            <img src="imagens/teste galeria/2.jpg" style="width:100%">
+                            <img src="imagens/teste galeria/2.jpg" alt="img">
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">3 / 4</div>
-                            <img src="imagens/teste galeria/3.jpg" style="width:100%">
+                            <img src="imagens/teste galeria/3.jpg" alt="img" >
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">4 / 4</div>
-                            <img src="imagens/teste galeria/4.jpg" style="width:100%">
+                            <img src="imagens/teste galeria/4.jpg" alt="img">
                         </div>
+
                         <!--setas direita e esquerda-->
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
                         <div class="caption-container">
                             <p id="caption"></p>
-                        </div>
-
-                        <!--coluna de imagens uma do lado da outra--> 
-                        <!-- escreva no "alt" alguma descreição da imagen caso queire -->
-                        <div class="column">
-                            <img class="demo cursor" src="imagens/teste galeria/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="descrição">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="imagens/teste galeria/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="descrição">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="imagens/teste galeria/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="descrição">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="imagens/teste galeria/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="descrição">
                         </div>
                     </div>
                 </div>

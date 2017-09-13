@@ -205,6 +205,9 @@ h3 {
     height: 100%;
     width: 60%;
     z-index: -1;
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
 }
 
 .main2{
@@ -219,10 +222,6 @@ h3 {
     margin-top: 10%;
     margin-top: 20%;
     text-align: justify;
-}
-
-.conteudo .gallery{
-    margin-left: 9%;
 }
 
 .p1{

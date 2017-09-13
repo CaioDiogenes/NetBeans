@@ -142,3 +142,33 @@ img.hover-shadow {
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+
+.button3 {
+    border-radius: 8px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border: 1px solid #999;
+    font-size: 16px;
+    float: left;
+    border-radius: 8px;
+
+    -webkit-transition:  1s;
+    transition:  1s;
+}
+
+.button:hover {
+    background-color: #00923f;
+    background-color:green;
+    -webkit-transition:  1s;
+    transition:  1s;
+
+}

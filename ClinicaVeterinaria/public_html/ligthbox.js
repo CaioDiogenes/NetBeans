@@ -38,3 +38,8 @@
                         dots[slideIndex - 1].className += " active";
                         captionText.innerHTML = dots[slideIndex - 1].alt;
                     }
+                    
+                    
+                    document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};

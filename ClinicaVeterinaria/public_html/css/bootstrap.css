@@ -339,7 +339,6 @@ th {
 }
 .glyphicon-remove:before {
     content: "\e014";
-    color:white;
 }
 .glyphicon-zoom-in:before {
     content: "\e015";
@@ -1139,9 +1138,9 @@ img {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 .img-circle {
     border-radius: 50%;
@@ -5012,9 +5011,9 @@ a.badge:focus {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    -webkit-transition: border .2s ease-in-out;
-    -o-transition: border .2s ease-in-out;
-    transition: border .2s ease-in-out;
+    -webkit-transition: border .1s ease-in-out;
+    -o-transition: border .1s ease-in-out;
+    transition: border .1s ease-in-out;
 }
 .thumbnail > img,
 .thumbnail a > img {
@@ -5163,9 +5162,9 @@ a.thumbnail.active {
 }
 .progress.active .progress-bar,
 .progress-bar.active {
-    -webkit-animation: progress-bar-stripes 2s linear infinite;
-    -o-animation: progress-bar-stripes 2s linear infinite;
-    animation: progress-bar-stripes 2s linear infinite;
+    -webkit-animation: progress-bar-stripes 1s linear infinite;
+    -o-animation: progress-bar-stripes 1s linear infinite;
+    animation: progress-bar-stripes 1s linear infinite;
 }
 .progress-bar-success {
     background-color: #5cb85c;

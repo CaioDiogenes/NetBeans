@@ -19,7 +19,8 @@ body {
 
 .column {
     float: left;
-    width: 25%;
+    width: 20%;
+    margin-left: 2%;
 }
 
 /* The Modal (background) */
@@ -63,7 +64,7 @@ body {
 }
 
 .mySlides {
-    height: 600px;
+    height: 100%;
 }
 
 .mySlides img{
@@ -154,6 +155,8 @@ img.hover-shadow {
     color: black;
     padding: 15px 32px;
     margin-left: 5%;
+    margin-bottom: 5%;
+    max-width: 100%;
     margin-right: 5%;
     margin-top: 5%;
     border: 1px solid #999;
@@ -171,4 +174,13 @@ img.hover-shadow {
     -webkit-transition:  1s;
     transition:  1s;
 
+}
+
+.upload{
+    max-width: 100%;
+}
+
+.enviar{
+    float: left;
+    margin-top: 2%;
 }

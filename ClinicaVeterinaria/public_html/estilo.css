@@ -8,7 +8,7 @@ html,body{
     flex-direction: column;
 }
 
-#cabecalho{
+.cabecalho{
     background-color: #00923f; 
     height: 80px;
     margin: 0;
@@ -67,9 +67,9 @@ img.logo {
     vertical-align: middle; 
 }
 .carousel-inner > .item > img {
-    position:relative;
-    min-width: 100%;
-    height: 5%;
+    height: 100%;
+    background-color: black;
+    width: 100%;
 }
 
 
@@ -225,8 +225,7 @@ h3 {
 }
 
 .p1{
-    margin-left: 10%;
-    margin-left: 10%;
+    margin-left: 2%;
     font-family: Times New Roman;
     font-size: 25px;
     font-style: italic;
@@ -360,9 +359,28 @@ q:after {
     margin-left: 20%;
 }
 
-.footer img{
+#rodape img{
     width: 100px; 
     height: 100px;
     position: absolute;
     bottom: 0;
+}
+
+#tudo {
+    min-height: 100%;
+    position: relative;
+}
+
+* html #tudo {
+    height: 100%; /* hack para IE6 que trata height como min-height */
+}
+
+#conteudo {
+    padding-bottom: 30px;
+}
+
+#rodape {
+    position: absolute;
+    bottom: 0;    
+    background-color: #efefef;
 }

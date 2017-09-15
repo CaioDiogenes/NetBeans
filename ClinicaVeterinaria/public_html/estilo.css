@@ -201,7 +201,7 @@ h3 {
     width: auto;
     margin-right: 20%;
     margin-left: 20%;
-    height: 100%;
+    min-height: 100%;
     width: 60%;
     z-index: -1;
     -webkit-flex: 1;  /* Safari 6.1+ */
@@ -331,9 +331,11 @@ q:after {
 }
 
 .medium-6{
-    margin-top: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center;
     width: 25%;
+    color: white;
 }
 
 .large-3 .pergunta{
@@ -360,6 +362,7 @@ q:after {
 
 html, body {
     height: 100%;
+    display: block;
 }
 
 #tudo {
@@ -371,13 +374,30 @@ html, body {
     position: absolute;
     bottom: 0;
     background-color: #00923f;
-    min-width: 100%;   
+    min-width: 100%; 
+    min-height: 5%;
 }
 
-div#conteudo {
+.imagem1rodape{
+    position: absolute;
+    bottom: 0;
+    margin-top: -2%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#conteudo {
     padding-bottom: 12%;
 }
 
 * html #tudo {
-    height: 100%; /* hack para IE6 que trata height como min-height */
+    min-height: 100%; /* hack para IE6 que trata height como min-height */
+}
+
+.clear{
+    clear: both;
+}
+
+#topo{
+    min-width: 100%;
 }

@@ -412,3 +412,16 @@ html, body {
 #topo{
     min-width: 100%;
 }
+
+.floating-box { 
+    width: 25%;
+    height: 20%;
+    margin-left: 7%; 
+    margin-top: 2%;
+    margin-bottom: 7%;
+    float: left;
+}
+
+.after-box {
+    border: 3px solid red; 
+}

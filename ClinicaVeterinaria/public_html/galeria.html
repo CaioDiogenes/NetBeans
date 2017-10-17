@@ -47,50 +47,45 @@
                     <div class="titulo"><center> Galeria de fotos </center></div>
                     <br><br>
                     <div class="row">
-                        <!--Botao para fazer upload em arquivos-->
-                        <button class="button button3">
-                            <input id="uploadBtn" type="file" class="upload" />
-                            <input type="submit" value="Enviar" name="enviar" class="enviar"/>
-                        </button>
-                    </div>
-                    <div class="column">
-                        <img src="imagens/teste galeria/1.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                    </div>
-                    <div class="column">
-                        <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                    </div>
-                    <div class="column">
-                        <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                    </div>
-                    <div class="column">
-                        <img src="imagens/teste galeria/3.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-                    </div>
-                    <div class="column">
-                        <img src="imagens/teste galeria/4.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-                    </div>
-                </div>
-                <!-- indicadore --> 
-                <div id="myModal" class="modal">
-                    <span class="cursor close" onclick="closeModal()">&times;</span>
-                    <div class="modal-content">
-                        <div class="mySlides">
-                            <img src="imagens/teste galeria/1.jpg" alt="img">
+                        <div class="column">
+                            <img src="imagens/teste galeria/1.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                         </div>
-                        <div class="mySlides">
-                            <img src="imagens/teste galeria/2.jpg" alt="img">
+                        <div class="column">
+                            <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                         </div>
-                        <div class="mySlides">
-                            <img src="imagens/teste galeria/3.jpg" alt="img" >
+                        <div class="column">
+                            <img src="imagens/teste galeria/2.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
                         </div>
-                        <div class="mySlides">
-                            <img src="imagens/teste galeria/4.jpg" alt="img">
+                        <div class="column">
+                            <img src="imagens/teste galeria/3.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
                         </div>
-                        <!--setas direita e esquerda-->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="column">
+                            <img src="imagens/teste galeria/4.jpg" alt="img" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                        </div>
+                    </div>
+                    <!-- indicadore --> 
+                    <div id="myModal" class="modal">
+                        <span class="cursor close" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                            <div class="mySlides">
+                                <img src="imagens/teste galeria/1.jpg" alt="img">
+                            </div>
+                            <div class="mySlides">
+                                <img src="imagens/teste galeria/2.jpg" alt="img">
+                            </div>
+                            <div class="mySlides">
+                                <img src="imagens/teste galeria/3.jpg" alt="img" >
+                            </div>
+                            <div class="mySlides">
+                                <img src="imagens/teste galeria/4.jpg" alt="img">
+                            </div>
+                            <!--setas direita e esquerda-->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-                        <div class="caption-container">
-                            <p id="caption"></p>
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
                         </div>
                     </div>
                 </div>

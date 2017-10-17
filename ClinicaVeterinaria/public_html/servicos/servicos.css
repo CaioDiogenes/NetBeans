@@ -21,11 +21,6 @@ html, body {
     position: relative;
 }
 
-#rodape {
-    position: absolute;
-    bottom: 0;
-}
-
 * html #tudo {
     height: 100%; /* hack para IE6 que trata height como min-height */
 }

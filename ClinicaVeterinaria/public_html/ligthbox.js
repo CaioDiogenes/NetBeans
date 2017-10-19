@@ -1,45 +1,41 @@
-                    function openModal() {
-                        document.getElementById('myModal').style.display = "block";
-                    }
+function openModal() {
+    $('#myModal').css("display", "block");
+}
 
-                    function closeModal() {
-                        document.getElementById('myModal').style.display = "none";
-                    }
+function closeModal() {
+    $('#myModal').css("display", "none");
+}
 
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-                    function plusSlides(n) {
-                        showSlides(slideIndex += n);
-                    }
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-                    function currentSlide(n) {
-                        showSlides(slideIndex = n);
-                    }
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-                    function showSlides(n) {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("demo");
-                        var captionText = document.getElementById("caption");
-                        if (n > slides.length) {
-                            slideIndex = 1;
-                        }
-                        if (n < 1) {
-                            slideIndex = slides.length;
-                        }
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        captionText.innerHTML = dots[slideIndex - 1].alt;
-                    }
+function showSlides(n) {
+    $(".mySlides").each(function(index, element){
+        slideIndex = index;
+
+        $(element).css("display", "none");
+    });
+
+    $(".demo").each(function(index, element){
+        $(element).removeClass("active");
+    });
+
+    $(".mySlides:nth-child("+slideIndex+")").css("display", "block");
+    dot = $(".demo:nth-child("+slideIndex+")");                                
+    dot.addClass("active");
+
+    $("#caption").html(dot.attr("alt"));
+}
                     
                     
-                    document.getElementById("uploadBtn").onchange = function () {
-    document.getElementById("uploadFile").value = this.value;
-};
+//document.getElementById("uploadBtn").onchange = function () {
+//    document.getElementById("uploadFile").value = this.value;
+//};

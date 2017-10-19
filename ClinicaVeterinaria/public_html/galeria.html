@@ -8,9 +8,13 @@
         <link rel="stylesheet" href="ligthbox.css" type="text/css" />
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" />
-        <script type="text/javascript" src="lightbox.js"></script>
         <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>        
+        <script src="js/jquery.ui.widget.js"></script>
+        <script src="js/jquery.fileupload.js"></script>
+        <script src="js/jquery.fileupload-process.js"></script>
+        <script src="js/jquery.fileupload-image.js"></script>
+        <script src="js/jquery.fileupload-validate.js"></script>
         <script type="text/javascript" src="ligthbox.js"></script>
     </head>
     <body>
@@ -89,6 +93,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="btn btn-success fileinput-button">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            <span>Add files...</span>
+                            
+                            <!-- The file input field used as target for the file upload widget -->
+                            <input id="fileupload" type="file" name="files[]" multiple>
+                        </span>
+                        
+                        <!-- The global progress bar -->
+                        <div id="progress" class="progress">
+                            <div class="progress-bar progress-bar-success"></div>
+                        </div>
+    
+                        <!-- The container for the uploaded files -->
+                        <div id="files" class="files"></div>
+                    </div>
+                </div>
                 <div class="clear"></div>
             </div>
             <div id="rodape">
@@ -129,5 +152,48 @@
                 <img class="imagem2rodape" src="imagens/Gato.png" alt="1">
             </div>
         </div>
+        
+        <script>
+            $(function () {
+                'use strict';
+                jQuery.support.cors = true;
+
+                // Initialize the jQuery File Upload widget:
+                $('#fileupload').fileupload({
+                    // Uncomment the following to send cross-domain cookies:
+                    //xhrFields: {withCredentials: true},
+                    url: 'http://localhost:8080/caoegato/upload'
+                });
+
+                // Enable iframe cross-domain access via redirect option:
+                $('#fileupload').fileupload(
+                    'option',
+                    'redirect',
+                    window.location.href.replace(
+                        /\/[^\/]*$/,
+                        '/cors/result.html?%s'
+                    )
+                );
+
+
+                // Load existing files:
+                $('#fileupload').addClass('fileupload-processing');
+                $.ajax({
+                    // Uncomment the following to send cross-domain cookies:
+                    //xhrFields: {withCredentials: true},
+                    url: $('#fileupload').fileupload('option', 'url'),
+                    dataType: 'json',
+                    crossDomain: true,
+                    type: "post",
+                    context: $('#fileupload')[0]
+                }).always(function () {
+                    $(this).removeClass('fileupload-processing');
+                }).done(function (result) {
+                    $(this).fileupload('option', 'done')
+                        .call(this, $.Event('done'), {result: result});
+                });
+
+            });
+        </script>
     </body>
 </html>

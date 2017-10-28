@@ -233,7 +233,7 @@ h3 {
     font-family: Times New Roman;
     font-size: 25px;
     font-style: italic;
-    min-height: 100px;
+    min-height: 105px;
 }
 
 .h{
@@ -414,6 +414,7 @@ html, body {
 
 .clear{
     clear: both;
+    margin-top: 15%;
 }
 
 #topo{

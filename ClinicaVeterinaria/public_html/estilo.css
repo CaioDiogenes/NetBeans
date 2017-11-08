@@ -414,7 +414,7 @@ html, body {
 
 .clear{
     clear: both;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 #topo{
@@ -432,4 +432,29 @@ html, body {
 
 .after-box {
     border: 3px solid red; 
+}
+
+div.formulario{
+    margin-top: 2%;
+    height: 80%;
+    margin-left: 45%;
+    margin-right: 10%;
+}
+
+div.formulario input,textarea{
+    color: black;
+    border: .5px solid;
+    border-radius: 10px;
+}
+
+#formulario{
+    border: 1px dashed;
+    background-image: url("imagens/Logo.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 600px;
+}
+
+div#informacoescentrais{
+    height: 100%;
 }

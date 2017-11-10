@@ -441,8 +441,9 @@ div.formulario{
     margin-right: 10%;
 }
 
-div.formulario input,textarea{
+div.formulario input,textarea,button{
     color: black;
+    background-color: transparent;
     border: .5px solid;
     border-radius: 10px;
 }

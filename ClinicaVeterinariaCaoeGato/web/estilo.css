@@ -10,8 +10,7 @@ html,body{
 .cabecalho{
     background-color: #00923f; 
     height: 80px;
-    margin: 0;
-    padding: 0;
+    min-width: 100%;
 }
 
 ul.menu {
@@ -419,6 +418,20 @@ html, body {
 
 #topo{
     min-width: 100%;
+}
+
+#adm a{
+    height: 20px;
+    background-color: white;
+    color: black;
+    font-family: Times New Roman;
+    font-size: 18px;
+    margin-left: 90%;
+}
+
+.login{
+    font-family: Times New Roman;
+    font-size: 20px;
 }
 
 .floating-box { 

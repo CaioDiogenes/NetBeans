@@ -55,16 +55,17 @@
 		$mail->Body = $Mensagem;
 		 
 		if(!$mail->Send()){
-		    echo "Message was not sent <br />PHPMailer Error: " . $mail->ErrorInfo;
+		    echo "Mensagem não enviada... <br />PHPMailer Error: " . $mail->ErrorInfo;
 		}
 		else{
-		    echo "Message has been sent";
+		    echo "Mensagem enviada com sucesso!";
 		}
 				
 		print "<br><b>Nome:</b> $Nome <br>";
 		print "<b>Email:</b> $Email <br>";
 		print "<b>Assunto:</b> $Assunto <br>";
 		print "<b>Mensagem:</b> $Mensagem <br>";
+		print "<br><input type='BUTTON' VALUE='Voltar' ONCLICK='javascript:history.go(-1)'>";
 	}
 
 ?>

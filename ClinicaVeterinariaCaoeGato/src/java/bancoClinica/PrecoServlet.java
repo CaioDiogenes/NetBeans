@@ -2,6 +2,8 @@ package bancoClinica;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +15,16 @@ public class PrecoServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Servicos c1 = new Servicos();
+        c1.nome = request.getParameter("nome");
+        c1.preco = request.getParameter("preco");
+        String inserirServicos = "INSERT INTO SERVICOS (NOME, PRECO)"
+                + "VALUES('" + c1.nome + "', '" + c1.preco + "');";
+        String urlbanco = "jdbc:mysql://localhost/banco";
+        String listarServicos = "Select * from cliente;";
+        java.sql.Connection banco;
+        java.sql.ResultSet listagem;
+        int n=0;
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>"
@@ -59,12 +71,12 @@ public class PrecoServlet extends HttpServlet {
                     + "            <div id=\"conteudo\">\n"
                     + "<div class=\"thumbnail col-md-8 col-md-offset-2\">");
             for (int i = 0; i < 30; i++) {
-               
-                    out.println("<div class=\"thumbnail col-md-6\">"
-                            + "<p>Beatriz Vasconcelos</p>"
-                            + "<p>Caio Corchado</p>"
-                            + "<p>João Lima<p>"
-                            + "</div>");
+
+                out.println("<div class=\"thumbnail col-md-6\">"
+                        + "<p>Beatriz Vasconcelos</p>"
+                        + "<p>Caio Corchado</p>"
+                        + "<p>João Lima<p>"
+                        + "</div>");
             }
             out.println("</div>"
                     + " <div class=\"clear\"></div> \n"
@@ -111,6 +123,13 @@ public class PrecoServlet extends HttpServlet {
                     + "</footer>"
                     + "    </body>\n"
                     + "</html>");
+            try {
+                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+                banco = DriverManager.getConnection(urlbanco, "root", "");
+            } catch (SQLException erro) {
+                out.println("<p>" + erro + "</p>");
+                throw new RuntimeException(erro);
+            }
         }
     }
 

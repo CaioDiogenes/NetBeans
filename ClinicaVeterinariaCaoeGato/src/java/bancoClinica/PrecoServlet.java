@@ -2,13 +2,14 @@ package bancoClinica;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+;
 
 @WebServlet(name = "PrecoServlet", urlPatterns = {"/PrecoServlet"})
 public class PrecoServlet extends HttpServlet {
@@ -18,15 +19,17 @@ public class PrecoServlet extends HttpServlet {
         Servicos c1 = new Servicos();
         c1.nome = request.getParameter("nome");
         c1.preco = request.getParameter("preco");
-        String inserirServicos = "INSERT INTO SERVICOS (NOME, PRECO)"
+        String inserirServicos = "INSERT INTO SERVICOS (nome, preco)"
                 + "VALUES('" + c1.nome + "', '" + c1.preco + "');";
         String urlbanco = "jdbc:mysql://localhost/banco";
-        String listarServicos = "Select * from cliente;";
+        String listarServicos = "Select * from servicos;";
         java.sql.Connection banco;
         java.sql.ResultSet listagem;
-        int n=0;
+
+        int n = 0;
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
             out.println("<!DOCTYPE html>"
                     + "<html>\n"
                     + "    <head>\n"
@@ -70,14 +73,55 @@ public class PrecoServlet extends HttpServlet {
                     + "            </div> \n"
                     + "            <div id=\"conteudo\">\n"
                     + "<div class=\"thumbnail col-md-8 col-md-offset-2\">");
-            for (int i = 0; i < 30; i++) {
 
-                out.println("<div class=\"thumbnail col-md-6\">"
-                        + "<p>Beatriz Vasconcelos</p>"
-                        + "<p>Caio Corchado</p>"
-                        + "<p>João Lima<p>"
-                        + "</div>");
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<title>O cadastro de : " + c1.nome + " foi adicionado</title>");
+            try {
+                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+                banco = DriverManager.getConnection(urlbanco, "root", "");
+            } catch (SQLException erro) {
+                out.println("<p>" + erro + "</p>");
+                throw new RuntimeException(erro);
             }
+            try {
+                PreparedStatement inserir = banco.prepareStatement(inserirServicos);
+                inserir.executeUpdate();
+            } catch (SQLException erro) {
+                out.println("<p>" + erro + "</p>");
+            }
+            try {
+                PreparedStatement listar = banco.prepareStatement(listarServicos);
+                listagem = listar.executeQuery();
+                out.println("<form>"
+                        + "<table class=\"table table-hover\">"
+                        + "<thead>"
+                        + "<tr>"
+                        + "<th>Nome</th>"
+                        + "<th>Preco</th>"
+                        + "</tr>"
+                        + "</thead>"
+                        + "<tbody>"
+                );
+                while (listagem.next()) {
+                    n++;
+                    out.println("<tr>");
+                    out.println("<td><input type=\"text\" name=\"nome" + n + "\" value=\"" + listagem.getInt("nome") + "\"</td>");
+                    out.println("<td>" + listagem.getString("nome") + "</td>");
+                    out.println("<td>" + listagem.getString("preco") + "</td>");
+                    out.println("</tr>");
+                }
+                out.println("</tbody>"
+                        + "</table>"
+                        + "</form>");
+            } catch (SQLException erro) {
+                out.println("<p>" + erro + "</p>");
+                out.println(
+                        "<div class=\"alert alert-danger\">"
+                        + "<strong>Erro!</strong> o registro não foi inserido."
+                        + "</div>"
+                );
+            }
+
             out.println("</div>"
                     + " <div class=\"clear\"></div> \n"
                     + "</div>\n"
@@ -123,17 +167,11 @@ public class PrecoServlet extends HttpServlet {
                     + "</footer>"
                     + "    </body>\n"
                     + "</html>");
-            try {
-                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-                banco = DriverManager.getConnection(urlbanco, "root", "");
-            } catch (SQLException erro) {
-                out.println("<p>" + erro + "</p>");
-                throw new RuntimeException(erro);
-            }
+
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

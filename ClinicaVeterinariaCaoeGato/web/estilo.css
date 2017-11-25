@@ -462,7 +462,6 @@ div.formulario input,textarea,button{
 }
 
 #formulario{
-    border: 1px dashed;
     background-image: url("imagens/Logo.png");
     background-repeat: no-repeat;
     background-position: left;

@@ -19,8 +19,7 @@ public class PrecoServlet extends HttpServlet {
         Servicos c1 = new Servicos();
         c1.nome = request.getParameter("nome");
         c1.preco = request.getParameter("preco");
-        String inserirServicos = "INSERT INTO SERVICOS (nome, preco)"
-                + "VALUES('" + c1.nome + "', '" + c1.preco + "');";
+        String inserirServicos = "INSERT INTO SERVICOS (nome, preco) VALUES('" + c1.nome + "', '" + c1.preco + "');";
         String urlbanco = "jdbc:mysql://localhost/banco";
         String listarServicos = "Select * from servicos;";
         java.sql.Connection banco;
@@ -46,7 +45,7 @@ public class PrecoServlet extends HttpServlet {
                     + "        <div id=\"tudo\">\n"
                     + "            <div id=\"topo\">\n"
                     + "                <div class=\"cabecalho row\">\n"
-                    + "                    <div class=\"col-md-1 col-md-offset-2 item-menu\"><a href=\"../index.html\">Home</a></div>\n"
+                    + "                    <div class=\"col-md-1 col-md-offset-2 item-menu\"><a href=\"index.html\">Home</a></div>\n"
                     + "                    <div class=\"col-md-1  item-menu\">\n"
                     + "                        <div class=\"dropdown\">\n"
                     + "                            <div class=\"dropbtn\"><a>Serviços</a></div>\n"
@@ -64,11 +63,11 @@ public class PrecoServlet extends HttpServlet {
                     + "                            </div>\n"
                     + "                        </div>\n"
                     + "                    </div>\n"
-                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"../galeria.html\">Galeria</a></div>\n"
+                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"galeria.html\">Galeria</a></div>\n"
                     + "                    <div class=\"col-md-2\"><img class=\"logo\" src=\"imagens/Logo.png\" alt=\"logo\"/></div>\n"
-                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"../sobre.html\">Sobre</a></div>\n"
-                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"../equipe.html\">Equipe</a></div>\n"
-                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"../contato.html\">Contato</a></div>\n"
+                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"sobre.html\">Sobre</a></div>\n"
+                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"equipe.html\">Equipe</a></div>\n"
+                    + "                    <div class=\"col-md-1  item-menu\"><a href=\"contato.html\">Contato</a></div>\n"
                     + "                </div> \n"
                     + "            </div> \n"
                     + "            <div id=\"conteudo\">\n"
@@ -105,7 +104,6 @@ public class PrecoServlet extends HttpServlet {
                 while (listagem.next()) {
                     n++;
                     out.println("<tr>");
-                    out.println("<td><input type=\"text\" name=\"nome" + n + "\" value=\"" + listagem.getInt("nome") + "\"</td>");
                     out.println("<td>" + listagem.getString("nome") + "</td>");
                     out.println("<td>" + listagem.getString("preco") + "</td>");
                     out.println("</tr>");
